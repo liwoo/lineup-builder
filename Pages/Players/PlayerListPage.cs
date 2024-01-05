@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using LineUp.Models;
@@ -11,6 +12,12 @@ namespace LineUp.Pages.Players;
 public class PlayerListPageState
 {
     public IEnumerable<Player> Players { get; set; } = [];
+
+     public IEnumerable<IGrouping<Position, Player>> GetGroupedPlayers()
+    {
+        return Players.GroupBy(p => p.Position);
+    }
+
 }
 
 public class PlayerListPage : Component<PlayerListPageState>
@@ -26,6 +33,7 @@ public class PlayerListPage : Component<PlayerListPageState>
 
     public override VisualNode Render()
     {
+        var groupedPlayers = State.GetGroupedPlayers();
         return new NavigationPage
             {
                 new ContentPage
@@ -35,11 +43,11 @@ public class PlayerListPage : Component<PlayerListPageState>
                              await Navigation?.PushModalAsync<AddPlayerPage>()!;
                         }),
 
-                        State.Players.Any()
+                        groupedPlayers.Any()
                             ? new ScrollView
                             {
-                                new CollectionView()
-                                    .ItemsSource(State.Players, PlayerListItem)
+                                groupedPlayers.Select(group =>new GroupedListItem(group.Key, group.ToList()
+                                    )).ToArray(),
                             }
                             : new Label("No players found").Center()
                     }
