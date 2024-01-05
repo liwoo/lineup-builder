@@ -13,7 +13,7 @@ public class GroupedListItem(Position position, IEnumerable<Player> Players) : C
              new Label(position.ToString())
              .FontSize(25)
              .FontAttributes(MauiControls.FontAttributes.Bold)
-             .VerticalOptions(MauiControls.LayoutOptions.Center),
+             .VerticalOptions(MauiControls.LayoutOptions.Center).Margin(0, 15, 0, 5),
             new CollectionView().ItemsSource(Players, PlayerListItem)
         };
     }
