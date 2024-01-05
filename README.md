@@ -1,9 +1,6 @@
 # LineupBuilder ⚽️
 ### .NET MAUI and MauiReactor Application
 
-put the following images in a table with 2 columns and 1 row
-
-
 | Reference Home Screen | Reference Player Screen |
 | --- | --- |
 | ![Reference Home Screen](https://res.cloudinary.com/tiyeni/image/upload/v1704444193/squad-reference.jpg) | ![Reference Player Screen](https://res.cloudinary.com/tiyeni/image/upload/v1704444368/player-details.jpg) |
