@@ -14,9 +14,9 @@ put the following images in a table with 2 columns and 1 row
 Welcome to the LineupBuilder app! 🚀 This README guides you through setting up and running the LineupBuilder application, a cross-platform solution for managing a soccer team's player squad, using .NET MAUI and MauiReactor.
 
 ### Motivation
-I want to use .NET MAUI to build cross-platform Apps more because of how awesome C# is a language!  The problem I have (apart from the fact that I still feel .NET MAUI is in Beta and therefore the 3rd best native cross-platform option :) is XAML for building UIs.
+I want to use [.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui?view=net-maui-8.0) to build cross-platform Apps more because of how awesome C# is a language!  The problem I have (apart from the fact that I still feel .NET MAUI is in Beta and therefore the 3rd best native cross-platform option :) is [XAML](https://learn.microsoft.com/en-us/dotnet/maui/xaml/?view=net-maui-8.0) for building UIs.
 
-However, I recently discovered [MauiReactor](https://adospace.gitbook.io/mauireactor/) which is a more Reactive and Declarative way of building UIs for .NET MAUI using C#, similar to how [SwiftUI](https://developer.apple.com/xcode/swiftui/) works I'm sold!  I decided to build a simple app using .NET MAUI and MauiReactor to see how it all works and I was pleasantly surprised at how easy it was to build a simple app.
+However, I recently discovered [MauiReactor](https://adospace.gitbook.io/mauireactor/) which is a more Reactive and Declarative way of building UIs for .NET MAUI using C#, similar to how [SwiftUI](https://developer.apple.com/xcode/swiftui/) works. I'm sold 😍  I decided to build a simple app using .NET MAUI and MauiReactor to see how it all works and I was pleasantly surprised at how easy it was to build a simple app.
 
 ## Prerequisites
 
@@ -69,7 +69,7 @@ dotnet-maui-reactor -f [net8.0-android|net8.0-ios|net8.0-maccatalyst|windows10.0
 #### Full Mode:
 
 ```bash
-dotnet-maui-reactor -f [net7.0-android|net7.0-ios|net7.0-maccatalyst|windows10.0.19041.0] --mode Full
+dotnet-maui-reactor -f [net8.0-android|net8.0-ios|net8.0-maccatalyst|windows10.0.19041.0] --mode Full
 ```
 
 Follow standard .NET MAUI procedures to run LineupBuilder on your preferred platform. 
