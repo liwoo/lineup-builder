@@ -1,6 +1,8 @@
 ﻿using MauiReactor;
 using Microsoft.Extensions.Logging;
 using LineUp.Pages;
+using LineUp.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 
 namespace LineUp;
@@ -29,6 +31,7 @@ public static class MauiProgram
     		builder.Logging.AddDebug();
 #endif
 
+        builder.Services.AddSingleton<IPlayerService, InMemoryPlayerService>();
         return builder.Build();
     }
 }

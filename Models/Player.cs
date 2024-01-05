@@ -1,4 +1,5 @@
 namespace LineUp.Models;
+
 public enum Nationality
 {
     England,
@@ -7,6 +8,9 @@ public enum Nationality
     Germany,
     Spain,
     Nigeria,
+    Brazil,
+    Ukraine,
+    Norway
 }
 
 public enum Position
