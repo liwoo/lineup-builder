@@ -1,6 +1,8 @@
 ﻿using System;
 using Android.App;
 using Android.Runtime;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
+using Microsoft.Maui.Controls.PlatformConfiguration;
 
 namespace LineUp
 {
@@ -12,6 +14,14 @@ namespace LineUp
         {
         }
 
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        protected override MauiApp CreateMauiApp()
+        {
+            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("NoUnderline", (h, v) =>
+            {
+                h.PlatformView.BackgroundTintList =
+                    Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
+            });
+            return MauiProgram.CreateMauiApp();
+        }
     }
 }
